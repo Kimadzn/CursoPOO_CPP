@@ -17,6 +17,6 @@ int main() {
     padrao1.setTempo(11, 25, 0);
     cout << "\nHora padrao atualizada: ";
     padrao1.imprime();
-
+   
     return 0;
 }
