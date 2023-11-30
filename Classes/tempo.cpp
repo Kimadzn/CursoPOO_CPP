@@ -14,6 +14,8 @@ Tempo::Tempo(int hh, int mm, int ss) {
 }
 
 void Tempo::setTempo(int hh, int mm, int ss) {
+    
+
     hora = hh;
     minuto = mm;
     segundo = ss;

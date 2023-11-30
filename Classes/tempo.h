@@ -7,6 +7,7 @@ class Tempo {
 // Mebros privados
 private:
     int hora, minuto, segundo; // mebro de dados
+    int *vetor;
 public:
     Tempo();//Construtor - inicializa (sempre mesmo nome da CLASS)
     Tempo (int, int, int);
