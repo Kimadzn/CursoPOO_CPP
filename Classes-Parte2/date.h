@@ -8,7 +8,7 @@ private:
 
 public:
     Date(int day = 1, int month = 1, int year = 1972);
-    ~Date() {}; // In-Class
+    ~Date(); // In-Class
     int get_day() {return d;}
     int get_month() {return m;}
     int get_year(){return y;}

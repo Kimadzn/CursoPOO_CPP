@@ -8,6 +8,12 @@ Date::Date(int dd, int mm, int yy)
     d = dd;
     m = mm;
     y = yy;
+
+    cout<<"\nObjeto Inicializado\n";
+}
+
+Date::~Date(){
+    cout<<"\nObjeto Destruido\n";
 }
 
 void Date::print()
