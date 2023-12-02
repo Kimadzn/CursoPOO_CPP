@@ -7,7 +7,7 @@ class Date {
 private:
     int d, m, y;
     bool isValidDate(int day, int month, int year);
-
+    void normalize();//caso de erro nos dias apos adicionar
 
 public:
     Date();
@@ -23,8 +23,7 @@ public:
     void set_year(int year);
     void add_days(int daysToAdd);
 
-private:
-    void normalize();//caso de erro nos dias apos adicionar
+    Date operator+(int days) const;
 };
 
 #endif // DATE_H

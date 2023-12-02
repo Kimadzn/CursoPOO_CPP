@@ -18,9 +18,15 @@ void Date::add_days(int daysToAdd) {
     d += daysToAdd;
     normalize();
 }
+/* Date Date::operator+(Date& daysToAdd){
+
+    d += daysToAdd;
+    normalize();
+
+} */
 
 void Date::normalize() {
-    while (d > 31 || m > 12) {
+ while (d > 31 || m > 12) {
         if (d > 31) {
             d -= 31;
             m++;
