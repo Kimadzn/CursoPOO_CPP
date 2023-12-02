@@ -22,8 +22,9 @@ public:
     void set_month(int month);
     void set_year(int year);
     void add_days(int daysToAdd);
+    
 
-    Date operator+(int days) const;
+    Date operator+(int days);
 };
 
 #endif // DATE_H

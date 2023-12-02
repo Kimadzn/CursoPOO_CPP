@@ -14,16 +14,19 @@ Date::Date(int dd, int mm, int yy) {
     std:: cout << "\nObjeto Inciado\n";
 }
 
-void Date::add_days(int daysToAdd) {
+/* void Date::add_days(int daysToAdd) {
     d += daysToAdd;
     normalize();
-}
-/* Date Date::operator+(Date& daysToAdd){
-
-    d += daysToAdd;
-    normalize();
-
 } */
+Date Date::operator+(int days){
+
+    this -> d = this -> d + days;
+    normalize(); // Chamar a função de normalização
+    return *this; // Retornar o objeto Date modificado
+    
+
+}
+
 
 void Date::normalize() {
  while (d > 31 || m > 12) {

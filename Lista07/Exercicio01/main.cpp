@@ -13,7 +13,9 @@ int main() {
     std::cout << "\nEscreva quantos dias para adicionar no calendario\n";
     int numeroDiasAdd = 0;
     std::cin >> numeroDiasAdd;  
-    inicial.add_days(numeroDiasAdd);
+    /* inicial.set_day(inicial.get_day () + numeroDiasAdd) ; */
+    /* inicial.add_days(numeroDiasAdd); */
+    Date novaData = inicial + numeroDiasAdd;
 
     std::cout << "Data apos adicionar " << numeroDiasAdd << " dias\n";
     inicial.print();
