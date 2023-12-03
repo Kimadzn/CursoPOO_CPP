@@ -2,33 +2,29 @@
 #include "complexo.cpp"
 #include <iostream>
 
+int main() {
+    Complexo n1(10, 20);
+    Complexo n2(5, 15);
 
-using namespace std;
-
-int main () {
-
-    Complexo n1 {10,20};
-    Complexo n2 {5.15};
-
-    cout << "n1 = ";
+    std::cout << "n1 = ";
     n1.print();
-    cout << endl;
+    std::cout << std::endl;
 
-
-    cout << "n2 = ";
+    std::cout << "n2 = ";
     n2.print();
-    cout << endl;
+    std::cout << std::endl;
 
     Complexo n3, n4;
-    n3 = n1+n2;
-    n4 = n1-n2;
-  
-    cout << "n3 (add) = ";
+    n3 = n1 + n2;
+    n4 = n1 - n2;
+
+    std::cout << "n3 (add) = ";
     n3.print();
-    cout << endl;
-    
-    cout << "n4 (sub) = ";
+    std::cout << std::endl;
+
+    std::cout << "n4 (sub) = ";
     n4.print();
-    cout << endl;
-    return 0; 
+    std::cout << std::endl;
+
+    return 0;
 }

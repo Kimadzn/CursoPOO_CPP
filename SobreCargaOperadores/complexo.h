@@ -1,29 +1,20 @@
 #ifndef COMPLEXO_H
 #define COMPLEXO_H
 
-class Complexo{
-    private:
+class Complexo {
+private:
     float re, im;
-    public:
-    Complexo(float = 0.0, float= 0.0);
-    ~Complexo(){};
 
-    //Interface 
+public:
+    Complexo(float r = 0.0, float i = 0.0);
+    ~Complexo() {};
 
-    void print();
-    Complexo add(Complexo&);
-    Complexo sub(Complexo&);
+    // Interface
+    void print() const;
 
+    // Sobrecarga de operadores
+    Complexo operator+(const Complexo& par) const;
+    Complexo operator-(const Complexo& par) const;
+};
 
-
-
-}; 
-
-
-////Sobrecarga de operadores!
-
-    Complexo operator+(Complexo&);
-    Complexo operator-(Complexo&);
-
-
-#endif
+#endif // COMPLEXO_H

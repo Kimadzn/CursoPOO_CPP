@@ -1,42 +1,20 @@
 #include "complexo.h"
 #include <iostream>
 
-using namespace std;
+Complexo::Complexo(float r, float i) : re(r), im(i) {}
 
-    Complexo::Complexo(float r, float i){
+void Complexo::print() const {
+    std::cout << re << " + (" << im << ")i";
+}
 
-        re = r; 
-        im = i;
+Complexo Complexo::operator+(const Complexo& par) const {
+    float x = this->re + par.re;
+    float y = this->im + par.im;
+    return Complexo(x, y);
+}
 
-    }
-    
-    
-
-    void Complexo::print(){
-        cout<< re << "+ (" << im << ")i";
-    }
-/*     Complexo Complexo::add(Complexo& par){
-        float x = this -> re + par.re;
-        float y = this -> im + par.im;
-        return Complexo{x,y};
-
-    }
-    Complexo Complexo::sub(Complexo& par){
-        float x = this -> re - par.re;
-        float y = this -> im - par.im;
-        return Complexo{x,y};
-
-    } */
-//Sobrecarga de operadores!
-
-    Complexo Complexo::operator+(Complexo& par){
-        float x = this -> re + par.re;
-        float y = this -> im + par.im;
-        return Complexo{x,y};
-    }
-    Complexo Complexo::operator-(Complexo& par){
-        float x = this -> re - par.re;
-        float y = this -> im - par.im;
-        return Complexo{x,y};
-
-    }
+Complexo Complexo::operator-(const Complexo& par) const {
+    float x = this->re - par.re;
+    float y = this->im - par.im;
+    return Complexo(x, y);
+}
