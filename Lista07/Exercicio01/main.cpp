@@ -20,6 +20,11 @@ int main() {
     std::cout << "Data apos adicionar " << numeroDiasAdd << " dias\n";
     inicial.print();
     
+    std::cout << "\nFuncao Amiga:\n ";
+    minhaFuncaoAmiga(inicial);
+    int diferenca = inicial.diferencaDiasEmRelacaoADataInicial();
+
+    std::cout << "A diferenca de dias com base na data incial: " << diferenca << std::endl;
 
     
 

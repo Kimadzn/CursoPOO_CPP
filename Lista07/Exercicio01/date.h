@@ -18,6 +18,10 @@ public:
     int get_year() const { return y; }
     void print() const;
 
+    friend void minhaFuncaoAmiga(const Date& inicial); // Declarando a função amiga
+    
+    int diferencaDiasEmRelacaoADataInicial() const;
+
     void set_day(int day);
     void set_month(int month);
     void set_year(int year);

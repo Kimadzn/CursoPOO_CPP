@@ -1,6 +1,12 @@
 #include "date.h"
 #include <iostream>
 
+void minhaFuncaoAmiga(const Date& inicial) {
+    std::cout << std::setw(2) << std::setfill('0') << inicial.get_day() << "/"
+              << std::setw(2) << std::setfill('0') << inicial.get_month() << "/"
+              << std::setw(4) << std::setfill('0') << inicial.get_year() << std::endl;
+}
+
 Date::Date(int dd, int mm, int yy) {
     if (isValidDate(dd, mm, yy)) {
         d = dd;
@@ -13,7 +19,15 @@ Date::Date(int dd, int mm, int yy) {
     }
     std:: cout << "\nObjeto Inciado\n";
 }
+int Date::diferencaDiasEmRelacaoADataInicial() const {
+    // Supondo que a data inicial é 1/1/1
+    Date dataInicial(1, 1, 1);
 
+    int diasNaDataInicial = dataInicial.get_day() + dataInicial.get_month() * 31 + dataInicial.get_year() * 365;
+    int diasNaDataAtual = d + m * 31 + y * 365;
+
+    return diasNaDataAtual - diasNaDataInicial;
+}
 /* void Date::add_days(int daysToAdd) {
     d += daysToAdd;
     normalize();
@@ -22,7 +36,7 @@ Date Date::operator+(int days){
 
     this -> d = this -> d + days;
     normalize(); // Chamar a função de normalização
-    return *this; // Retornar o objeto Date modificado
+    return *this; // Retornar o objeto Dahte modificado
     
 
 }
