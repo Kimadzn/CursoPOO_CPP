@@ -41,7 +41,6 @@ Date Date::operator+(int days){
 
 }
 
-
 void Date::normalize() {
  while (d > 31 || m > 12) {
         if (d > 31) {
