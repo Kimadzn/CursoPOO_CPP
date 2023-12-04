@@ -43,6 +43,7 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "initializer_list": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "complex": "cpp"
     }
 }
