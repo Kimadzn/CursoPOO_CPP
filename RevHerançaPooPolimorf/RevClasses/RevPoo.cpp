@@ -11,7 +11,7 @@ private:
     int idade;
 
 public:
-    Pessoa(int _id, string _nome, int _idade);
+    Pessoa(int _id, string _nome, int _idade);//Variavel temporaria 
     void setIdade(int _idade);
     int getIdade();
     void setId(int _id);
