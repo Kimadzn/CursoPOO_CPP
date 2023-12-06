@@ -32,7 +32,7 @@ int Date::diferencaDiasEmRelacaoADataInicial() const {
     d += daysToAdd;
     normalize();
 } */
-Date Date::operator+(int days){
+Date Date::operator+(int days){//variavel temporaria
 
     this -> d = this -> d + days;
     normalize(); // Chamar a função de normalização
