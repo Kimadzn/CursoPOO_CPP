@@ -28,10 +28,30 @@ int Date::diferencaDiasEmRelacaoADataInicial() const {
 
     return diasNaDataAtual - diasNaDataInicial;
 }
-/* void Date::add_days(int daysToAdd) {
+ void Date::add_days(int daysToAdd) {
     d += daysToAdd;
     normalize();
-} */
+} 
+
+Date Date::operator-(int diferencaDiasEmRelacaoADataInicial) const {
+    // Supondo que a data inicial é 1/1/1
+    Date dataInicial(1, 1, 1);
+
+    // Calcular a diferença em dias
+    int diasNaDataInicial = dataInicial.get_day() + dataInicial.get_month() * 31 + dataInicial.get_year() * 365;
+    int diasNaDataAtual = d + m * 31 + y * 365;
+    int diferencaEmDias = diasNaDataAtual - diasNaDataInicial;
+
+    // Subtrair a diferença desejada
+    diferencaEmDias -= diferencaDiasEmRelacaoADataInicial;
+
+    // Criar um novo objeto Date com a data resultante
+    Date novaData(dataInicial);
+    novaData.add_days(diferencaEmDias);
+
+    return novaData;
+}
+
 Date Date::operator+(int days){//variavel temporaria
 
     this -> d = this -> d + days;

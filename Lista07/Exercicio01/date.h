@@ -29,6 +29,7 @@ public:
   
     
     Date operator+(int days);
+    Date operator-(int diferencaDiasEmRelacaoADataInicial) const;
 };
 
 #endif // DATE_H
