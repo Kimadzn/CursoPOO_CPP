@@ -4,11 +4,17 @@
 
 int main() {
     Hora inicial(0, 0, 0);
-    std::cout << "Tempo Inicial: ";
+    std::cout << "Hora Inicial: ";
     inicial.print();
-    std::cout << "\nTeste de funcoes GET (Pode ignorar Professor)";
-    std::cout << "\nHora:" <<  inicial.get_hora() << std::endl;    
-    std::cout << "Minuto:" <<  inicial.get_minuto() << std::endl;    
-    std::cout << "Segundo:" <<  inicial.get_segundo() << std::endl;
+    std::cout << "\n";
+
+    Hora adicionar(2, 15, 20);
+    inicial.add_horario(adicionar);
+    std::cout << "Hora apos adicionar: " << inicial << "\n";
+
+    Hora horarioPassado(0, 0, 0);
+    Hora diferenca = inicial - horarioPassado;
+    std::cout << "Diferenca de horarios: " << diferenca << "\n";
+
     return 0;
 }
